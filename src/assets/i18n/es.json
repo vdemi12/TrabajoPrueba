@@ -1,0 +1,115 @@
+{
+  "COMMON": {
+    "LANGUAGE": "Idioma",
+    "SPANISH": "Español",
+    "ENGLISH": "Inglés",
+    "ERROR": {
+      "LOAD": "Error al cargar los datos",
+      "SAVE": "Error al guardar los cambios"
+    },
+    "SUCCESS": {
+      "SAVE": "Cambios guardados correctamente"
+    }
+  },
+  "SEASONS": {
+    "TITLE": "Temporadas",
+    "ADD_BUTTON": "Añadir",
+    "SEARCH_PLACEHOLDER": "Buscar temporadas...",
+    "NO_RESULTS": "No se encontraron temporadas",
+    "COLUMNS": {
+      "NAME": "Nombre"
+    },
+    "ACTIONS": {
+      "EDIT": "Editar",
+      "DELETE": "Eliminar",
+      "VIEW": "Ver detalles"
+    },
+    "MESSAGES": {
+      "DELETE_CONFIRM": "¿Está seguro que desea eliminar esta temporada?",
+      "DELETE_SUCCESS": "Temporada eliminada correctamente",
+      "DELETE_ERROR": "Error al eliminar la temporada",
+      "SAVE_SUCCESS": "Temporada guardada correctamente",
+      "SAVE_ERROR": "Error al guardar la temporada"
+    }
+  },
+  "SEASON": {
+    "EDIT": "Editar temporada",
+    "NEW": "Nueva temporada",
+    "NAME": "Nombre",
+    "NUMSEASON": "Nº de la Temporada",
+    "NUMEPISODES": "Nº de Episodios",
+    "RELEASEDATE": "Fecha de salida",
+    "RATING": "Calificacion",
+    "SERIE": "Serie a la que pertenece",
+    "SUBMIT": "Registrar",
+    "UPDATE": "Actualizar",
+    "ERRORS": {
+      "NAME_REQUIRED": "El nombre es obligatorio",
+      "NAME_MIN_LENGTH": "El nombre debe tener al menos 2 caracteres",
+      "NUMSEASON_REQUIRED": "Nº de la Temporada es obligatorio",
+      "NUMEPISODES_REQUIRED": "Nº de Episodios es obligatorio",
+      "RELEASEDATE_REQUIRED": "Fecha de salida es obligatorio",
+      "RATING_REQUIRED": "Calificacion es obligatorio"
+    }
+  },
+  "SERIES": {
+    "TITLE": "Series",
+    "ADD_BUTTON": "Añadir",
+    "SEARCH_PLACEHOLDER": "Buscar series...",
+    "NO_RESULTS": "No se encontraron series",
+    "COLUMNS": {
+      "NAME": "Nombre"
+    },
+    "ACTIONS": {
+      "EDIT": "Editar",
+      "DELETE": "Eliminar",
+      "VIEW": "Ver detalles"
+    },
+    "MESSAGES": {
+      "DELETE_CONFIRM": "¿Está seguro que desea eliminar esta serie?",
+      "DELETE_SUCCESS": "Serie eliminada correctamente",
+      "DELETE_ERROR": "Error al eliminar la serie",
+      "SAVE_SUCCESS": "Serie guardada correctamente",
+      "SAVE_ERROR": "Error al guardar la serie"
+    }
+  },
+  "SERIE": {
+    "EDIT": "Editar serie",
+    "NEW": "Nueva serie",
+    "NAME": "Nombre",
+    "SYNOPSIS": "Sinopsis",
+    "RELEASEYEAR": "Año de salida",
+    "RATING": "Calificacion",
+    "SUBMIT": "Registrar",
+    "UPDATE": "Actualizar",
+    "ERRORS": {
+      "NAME_REQUIRED": "El nombre es obligatorio",
+      "NAME_MIN_LENGTH": "El nombre debe tener al menos 2 caracteres",
+      "SYNOPSIS_REQUIRED": "Sinopsis es obligatorio",
+      "RELEASEYEAR_REQUIRED": "Año de salida es obligatorio",
+      "RATING_REQUIRED": "Calificacion es obligatorio"
+    }
+  },
+  "SERIE_SELECTABLE": {
+    "SELECT_SERIE": "Seleccione una serie",
+    "NONE": "Ninguno",
+    "SEARCH": "Buscar"
+  },
+  "PERSON": {
+    "GENDER": "Genero",
+    "GENDER_PLACEHOLDER": "Seleccione un genero"
+  },
+  "MENU": {
+    "TITLE": "Menú",
+    "HOME": "Inicio",
+    "SEASONS": "Temporadas",
+    "SERIES": "Series",
+    "LOGOUT": "Cerrar sesión",
+    "PROFILE": "Perfil"
+  },
+  "PROFILE": {
+    "TITLE": "Perfil",
+    "SUBTITLE": "Tu información personal",
+    "UPDATE": "Actualizar"
+  }
+} 

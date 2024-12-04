@@ -1,0 +1,80 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-icon slot="start" name="season-outline"></ion-icon>
+      <ion-title>
+        @if (mode=='edit') {
+          {{ 'SEASON.EDIT' | translate }}
+        }
+        @else {
+          {{ 'SEASON.NEW' | translate }}
+        }
+      </ion-title>
+      @if (isMobile) {
+        <ion-buttons slot="end">
+          <ion-button (click)="dismiss()">
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      }
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+      <!-- Nombre -->
+      <ion-item>
+        <ion-input [label]="'SEASON.NAME' | translate" label-placement="stacked"  type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <p *ngIf="name?.errors?.['required']">{{ 'SEASON.ERRORS.NAME_REQUIRED' | translate }}</p>
+        <p *ngIf="name?.errors?.['minlength']">{{ 'SEASON.ERRORS.NAME_MIN_LENGTH' | translate }}</p>
+      </ion-text>
+  
+      <!-- Numero de la temporadas -->
+      <ion-item>
+        <ion-input [label]="'SEASON.NUMSEASON' | translate" label-placement="stacked" type="text" formControlName="numSeason"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="numSeason?.invalid && (numSeason?.dirty || numSeason?.touched)">
+        <p *ngIf="numSeason?.errors?.['required']">{{ 'SEASON.ERRORS.NUMSEASON_REQUIRED' | translate }}</p>
+        <p *ngIf="numSeason?.errors?.['minlength']">{{ 'SEASON.ERRORS.NUMSEASON_MIN_LENGTH' | translate }}</p>
+      </ion-text>
+  
+      <!-- Numero de episodios -->
+      <ion-item>
+        <ion-input [label]="'SEASON.NUMEPISODES' | translate" label-placement="stacked" type="numEpisodes" formControlName="numEpisodes"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="numEpisodes?.invalid && (numEpisodes?.dirty || numEpisodes?.touched)">
+        <p *ngIf="numEpisodes?.errors?.['required']">{{ 'SEASON.ERRORS.NUMEPISODES_REQUIRED' | translate }}</p>
+        <p *ngIf="numEpisodes?.errors?.['numEpisodes']">{{ 'SEASON.ERRORS.NUMEPISODES_INVALID' | translate }}</p>
+      </ion-text>
+
+      <!-- Fecha lanzamiento  -->
+      <ion-item>
+        <ion-input [label]="'SEASON.RELEASEDATE' | translate" label-placement="stacked" type="date" formControlName="releaseDate"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="releaseDate?.invalid && (releaseDate?.dirty || releaseDate?.touched)">
+        <p *ngIf="releaseDate?.errors?.['required']">{{ 'SEASON.ERRORS.RELEASEDATE_REQUIRED' | translate }}</p>
+        <p *ngIf="releaseDate?.errors?.['releaseDate']">{{ 'SEASON.ERRORS.RELEASEDATE_INVALID' | translate }}</p>
+      </ion-text>
+
+      <!-- Calificacion -->
+      <ion-item>
+        <ion-input [label]="'SEASON.RATING' | translate" label-placement="stacked" type="rating" formControlName="rating"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="rating?.invalid && (rating?.dirty || rating?.touched)">
+        <p *ngIf="rating?.errors?.['required']">{{ 'SEASON.ERRORS.RATING_REQUIRED' | translate }}</p>
+        <p *ngIf="rating?.errors?.['rating']">{{ 'SEASON.ERRORS.RATING_INVALID' | translate }}</p>
+      </ion-text>
+
+      <!-- Serie a la que pertenece -->
+      <ion-item>
+        <ion-label position="stacked">{{ 'SEASON.SERIE' | translate }}</ion-label>
+        <app-serie-selectable formControlName="serieId"></app-serie-selectable>
+      </ion-item>
+      
+      <!-- Botón de Envío -->
+      <ion-button [disabled]="!formGroup.valid || !formGroup.dirty" expand="full" type="submit" >{{ 'SEASON.SUBMIT' | translate }}</ion-button>
+    </form>
+
+  </ion-content>

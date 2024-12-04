@@ -1,0 +1,114 @@
+{
+  "COMMON": {
+    "LANGUAGE": "Language",
+    "SPANISH": "Spanish",
+    "ENGLISH": "English",
+    "ERROR": {
+      "LOAD": "Error loading data",
+      "SAVE": "Error saving changes"
+    },
+    "SUCCESS": {
+      "SAVE": "Changes saved successfully"
+    }
+  },
+  "SEASONS": {
+    "TITLE": "Seasons",
+    "ADD_BUTTON": "Add",
+    "SEARCH_PLACEHOLDER": "Search seasons...",
+    "NO_RESULTS": "No seasons found",
+    "COLUMNS": {
+      "NAME": "Name"
+    },
+    "ACTIONS": {
+      "EDIT": "Edit",
+      "DELETE": "Delete",
+      "VIEW": "View details"
+    },
+    "MESSAGES": {
+      "DELETE_CONFIRM": "Are you sure you want to delete this season?",
+      "DELETE_SUCCESS": "Season successfully deleted",
+      "DELETE_ERROR": "Error deleting season",
+      "SAVE_SUCCESS": "Season successfully saved",
+      "SAVE_ERROR": "Error saving season"
+    }
+  },
+  "SEASON": {
+    "EDIT": "Edit season",
+    "NEW": "New season",
+    "NAME": "Name",
+    "NUMSEASON": "Nº of the Season",
+    "NUMEPISODES": "Nº of Episodes",
+    "RELEASEDATE": "Release date",
+    "RATING": "Rating",
+    "SERIE": "Serie it belongs to",
+    "SUBMIT": "Register",
+    "UPDATE": "Update",
+    "ERRORS": {
+      "NAME_REQUIRED": "Name is required",
+      "NAME_MIN_LENGTH": "Name must be at least 2 characters long",
+      "NUMSEASON_REQUIRED": "Nº of the Season is required",
+      "NUMEPISODES_REQUIRED": "Nº of Episodes is required",
+      "RELEASEDATE_REQUIRED": "Release date is required",
+      "RATING_REQUIRED": "Rating is required"
+    }
+  },
+  "SERIES": {
+    "TITLE": "Series",
+    "ADD_BUTTON": "Add",
+    "SEARCH_PLACEHOLDER": "Search series...",
+    "NO_RESULTS": "No series found",
+    "COLUMNS": {
+      "NAME": "Name"
+    },
+    "ACTIONS": {
+      "EDIT": "Edit",
+      "DELETE": "Delete",
+      "VIEW": "View details"
+    },
+    "MESSAGES": {
+      "DELETE_CONFIRM": "Are you sure you want to delete this serie?",
+      "DELETE_SUCCESS": "Serie successfully deleted",
+      "DELETE_ERROR": "Error deleting serie",
+      "SAVE_SUCCESS": "Serie successfully saved",
+      "SAVE_ERROR": "Error saving serie"
+    }
+  },
+  "SERIE": {
+    "EDIT": "Edit serie",
+    "NEW": "New serie",
+    "NAME": "Name",
+    "SYNOPSIS": "Synopsis",
+    "RELEASEYEAR": "Release year",
+    "RATING": "Rating",
+    "SUBMIT": "Register",
+    "UPDATE": "Update",
+    "ERRORS": {
+      "NAME_REQUIRED": "Name is required",
+      "NAME_MIN_LENGTH": "Name must be at least 2 characters long",
+      "SYNOPSIS_REQUIRED": "Synopsis is required",
+      "RELEASEYEAR_REQUIRED": "Release year is required",
+      "RATING_REQUIRED": "Rating is required"
+    }
+  },
+  "SERIE_SELECTABLE": {
+    "SELECT_SERIE": "Select a serie",
+    "NONE": "None",
+    "SEARCH": "Search"
+  },
+  "PERSON": {
+    "GENDER": "Gender",
+    "GENDER_PLACEHOLDER": "Select a gender"
+  },
+  "MENU": {
+    "TITLE": "Menu",
+    "HOME": "Home",
+    "SEASONS": "Seasons",
+    "SERIES": "Series",
+    "LOGOUT": "Logout",
+    "PROFILE": "Profile"
+  },
+  "PROFILE": {
+    "TITLE": "Profile",
+    "SUBTITLE": "Your personal information"
+  }
+} 

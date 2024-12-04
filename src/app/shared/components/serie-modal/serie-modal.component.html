@@ -1,0 +1,65 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-icon slot="start" name="serie-outline"></ion-icon>
+      <ion-title>
+        @if (mode=='edit') {
+          {{ 'SERIE.EDIT' | translate }}
+        }
+        @else {
+          {{ 'SERIE.NEW' | translate }}
+        }
+      </ion-title>
+      @if (isMobile) {
+        <ion-buttons slot="end">
+          <ion-button (click)="dismiss()">
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      }
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+      <!-- Nombre -->
+      <ion-item>
+        <ion-input [label]="'SERIE.NAME' | translate" label-placement="stacked"  type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <p *ngIf="name?.errors?.['required']">{{ 'SERIE.ERRORS.NAME_REQUIRED' | translate }}</p>
+        <p *ngIf="name?.errors?.['minlength']">{{ 'SERIE.ERRORS.NAME_MIN_LENGTH' | translate }}</p>
+      </ion-text>
+  
+      <!-- Sinopsis -->
+      <ion-item>
+        <ion-textarea [label]="'SERIE.SYNOPSIS' | translate" label-placement="stacked" type="synopsis" formControlName="synopsis"></ion-textarea>
+      </ion-item>
+      <ion-text color="danger" *ngIf="synopsis?.invalid && (synopsis?.dirty || synopsis?.touched)">
+        <p *ngIf="synopsis?.errors?.['required']">{{ 'SERIE.ERRORS.SYNOPSIS_REQUIRED' | translate }}</p>
+        <p *ngIf="synopsis?.errors?.['minlength']">{{ 'SERIE.ERRORS.SYNOPSIS_MIN_LENGTH' | translate }}</p>
+      </ion-text>
+  
+      <!-- Año de lanzamiento -->
+      <ion-item>
+        <ion-input [label]="'SERIE.RELEASEYEAR' | translate" label-placement="stacked" type="releaseYear" formControlName="releaseYear"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="releaseYear?.invalid && (releaseYear?.dirty || releaseYear?.touched)">
+        <p *ngIf="releaseYear?.errors?.['required']">{{ 'SERIE.ERRORS.RELEASEYEAR_REQUIRED' | translate }}</p>
+        <p *ngIf="releaseYear?.errors?.['releaseYear']">{{ 'SERIE.ERRORS.RELEASEYEAR_INVALID' | translate }}</p>
+      </ion-text>
+
+      <!-- Calificacion -->
+      <ion-item>
+        <ion-input [label]="'SERIE.RATING' | translate" label-placement="stacked" type="rating" formControlName="rating"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="rating?.invalid && (rating?.dirty || rating?.touched)">
+        <p *ngIf="rating?.errors?.['required']">{{ 'SERIE.ERRORS.RATING_REQUIRED' | translate }}</p>
+        <p *ngIf="rating?.errors?.['rating']">{{ 'SERIE.ERRORS.RATING_INVALID' | translate }}</p>
+      </ion-text>
+      
+      <!-- Botón de Envío -->
+      <ion-button [disabled]="!formGroup.valid || !formGroup.dirty" expand="full" type="submit" >{{ 'SERIE.SUBMIT' | translate }}</ion-button>
+    </form>
+
+  </ion-content>
